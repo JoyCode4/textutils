@@ -24,6 +24,29 @@ function TextForm(props){
         setText(newText);
     }
 
+    const Encrypt=()=>{
+        let newText="";
+        for(let i=0;i<text.length;i++){
+            newText = newText+text.charCodeAt(i)+".";
+        }
+        setText(newText);
+    }
+
+    const Decrypt=()=>{
+        let data=text.split(".");
+        let newText=""
+        data.pop();
+        for(let i of data){
+            newText = newText + (String.fromCharCode(parseInt(i)));
+        }
+        setText(newText);
+    }
+
+    const Clear = ()=>{
+        let newText = "";
+        setText(newText);
+    }
+
 
     const uppercaseChange=(e)=>{
         setText(e.target.value);
@@ -38,6 +61,9 @@ function TextForm(props){
                 <button className="btn btn-primary mx-3" onClick={Uppercase} >Uppercase</button>
                 <button className="btn btn-primary mx-3" onClick={Lowercase} >Lowercase</button>
                 <button className="btn btn-primary mx-3" onClick={Capitalized} >Capitalized</button>
+                <button className="btn btn-primary mx-3" onClick={Clear} >Clear Text</button>
+                <button className="btn btn-primary mx-3" onClick={Encrypt} >Encrypt</button>
+                <button className="btn btn-primary mx-3" onClick={Decrypt} >Decrypt</button>
             </div>
             <div className="container my-3">
                 <h1>Text Summary</h1>
