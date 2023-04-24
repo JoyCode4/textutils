@@ -5,19 +5,23 @@ export default function About() {
         backgroundColor:"white",
         color:"black"
     });
+
+    const [text,textState] = useState("Enable Dark Mode");
     const toggleMode = ()=>{
         if(bg.backgroundColor==="white"){
             bgState({
                 backgroundColor:"black",
                 color:"white",
-                border:"1px solid white"
+                border:"0px solid white"
             })
+            textState("Disable Dark Mode");
         }
         else{
             bgState({
                 backgroundColor:"white",
                 color:"black"
             })
+            textState("Enable Dark Mode");
         }
     }
   return (
@@ -123,7 +127,7 @@ export default function About() {
         </div>
         <div className="form-check form-switch m-3">
             <input className="form-check-input" onClick={toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-            <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable Dark Mode</label>
+            <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{text}</label>
         </div>
     </div>
   );
