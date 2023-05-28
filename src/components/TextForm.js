@@ -80,22 +80,22 @@ function TextForm(props) {
             }}
           ></textarea>
         </div>
-        <button className={`btn btn-primary mx-3`} onClick={Uppercase}>
+        <button className={`btn btn-primary mx-3 my-1`} onClick={Uppercase}>
           Uppercase
         </button>
-        <button className="btn btn-primary mx-3" onClick={Lowercase}>
+        <button className="btn btn-primary mx-3 my-1" onClick={Lowercase}>
           Lowercase
         </button>
-        <button className="btn btn-primary mx-3" onClick={Capitalized}>
+        <button className="btn btn-primary mx-3 my-1" onClick={Capitalized}>
           Capitalized
         </button>
-        <button className="btn btn-primary mx-3" onClick={Clear}>
+        <button className="btn btn-primary mx-3 my-1" onClick={Clear}>
           Clear Text
         </button>
-        <button className="btn btn-primary mx-3" onClick={Encrypt}>
+        <button className="btn btn-primary mx-3 my-1" onClick={Encrypt}>
           Encrypt
         </button>
-        <button className="btn btn-primary mx-3" onClick={Decrypt}>
+        <button className="btn btn-primary mx-3 my-1" onClick={Decrypt}>
           Decrypt
         </button>
       </div>
