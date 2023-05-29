@@ -58,7 +58,7 @@ function TextForm(props) {
   };
 
   // Word count without null words
-  const words = text.split(" ").filter((word)=>{
+  const words = text.split(/\s+/).filter((word)=>{
     return word!=="";
   })
   console.log(words);
